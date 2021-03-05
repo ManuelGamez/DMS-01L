@@ -1,0 +1,6 @@
+
+<resources>
+    <string name="app_name">ImplementandoRecursos</string>
+    <string name="saludo1">Bonjour utilisateur</string>
+    <string name="saludo2">Bienvenue</string>
+</resources>
