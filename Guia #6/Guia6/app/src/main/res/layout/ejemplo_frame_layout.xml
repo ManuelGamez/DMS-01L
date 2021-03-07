@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:text="Saltar"
+    android:id="@+id/boton_saltar"
+    android:layout_gravity="center_horizontal|bottom"/>
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/imagen_background"
+    android:layout_gravity="top|center"
+    android:src="@drawable/ic_launcher_background"
+    android:scaleType="centerCrop" />
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imagen_estadistica"
+    android:layout_gravity="center"
+    android:src="@drawable/ic_launcher_foreground"
+    android:padding="16dp" />
+
+</FrameLayout>
