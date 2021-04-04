@@ -23,6 +23,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <TextView
+        android:id="@+id/tvfecha"
+        android:background="#ffffff"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvgenero"
+        android:background="#ffffff"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvpeso"
+        android:background="#ffffff"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvaltura"
+        android:background="#ffffff"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <View style="@style/Divider"/>
 
 </LinearLayout>

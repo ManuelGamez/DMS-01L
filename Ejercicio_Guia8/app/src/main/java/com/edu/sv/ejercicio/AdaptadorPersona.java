@@ -43,9 +43,17 @@ public class AdaptadorPersona extends ArrayAdapter<Persona> {
 
         TextView tvNombre = rowview.findViewById(R.id.tvNombre);
         TextView tvDUI = rowview.findViewById(R.id.tvDUI);
+        TextView tvgenero = rowview.findViewById(R.id.tvgenero);
+        TextView tvfecha = rowview.findViewById(R.id.tvfecha);
+        TextView tvpeso = rowview.findViewById(R.id.tvpeso);
+        TextView tvaltura = rowview.findViewById(R.id.tvaltura);
 
         tvNombre.setText("Nombre : "+personas.get(position).getNombre());
         tvDUI.setText("DUI : " + personas.get(position).getDui());
+        tvfecha.setText("Fecha de Nacimiento : " + personas.get(position).getFecha());
+        tvgenero.setText("Genero : " + personas.get(position).getGenero());
+        tvpeso.setText("Peso : " + personas.get(position).getPeso());
+        tvaltura.setText("Altura : " + personas.get(position).getAltura());
 
         return rowview;
     }
