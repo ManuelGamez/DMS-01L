@@ -6,12 +6,12 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-        buildFeatures{
-            viewBinding = true
-        }
+    buildFeatures{
+        viewBinding = true
+    }
 
     defaultConfig {
-        applicationId "com.edu.sv.ejemplo_g9"
+        applicationId "com.edu.sv.ejerciciog9"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -44,4 +44,8 @@ dependencies {
     implementation "com.squareup.picasso:picasso:2.71828"
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    implementation 'com.intellij:annotations:+@jar'
+    implementation 'com.android.support:support-annotations:+'
+    implementation "androidx.annotation:annotation:1.1.0"
 }
