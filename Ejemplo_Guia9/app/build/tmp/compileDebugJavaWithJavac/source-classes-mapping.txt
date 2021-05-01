@@ -1,0 +1,17 @@
+com/edu/sv/ejemplo_g9/ApiService.java
+ com.edu.sv.ejemplo_g9.ApiService
+com/edu/sv/ejemplo_g9/DogViewHolder.java
+ com.edu.sv.ejemplo_g9.DogViewHolder
+com/edu/sv/ejemplo_g9/DogAdapter.java
+ com.edu.sv.ejemplo_g9.DogAdapter
+com/edu/sv/ejemplo_g9/MainActivity.java
+ com.edu.sv.ejemplo_g9.MainActivity
+ com.edu.sv.ejemplo_g9.MainActivity$1
+com/edu/sv/ejemplo_g9/DogsResponse.java
+ com.edu.sv.ejemplo_g9.DogsResponse
+com/edu/sv/ejemplo_g9/databinding/ItemDogBinding.java
+ com.edu.sv.ejemplo_g9.databinding.ItemDogBinding
+com/edu/sv/ejemplo_g9/databinding/ActivityMainBinding.java
+ com.edu.sv.ejemplo_g9.databinding.ActivityMainBinding
+com/edu/sv/ejemplo_g9/BuildConfig.java
+ com.edu.sv.ejemplo_g9.BuildConfig
