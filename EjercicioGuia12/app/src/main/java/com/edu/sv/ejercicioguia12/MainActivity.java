@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,29 +27,22 @@ public class MainActivity extends AppCompatActivity {
         adaptador = new StudentsAdapter(this);
 
         Agregar = findViewById(R.id.fab_agregar);
-        Agregar.setOnClickListener(v -> {
-            Intent intent = new Intent(getBaseContext(), Agregar.class);
-            startActivity(intent);
-        });
 
         lista = findViewById(R.id.lista);
         lista.setAdapter(adaptador);
-        retrieveStudents();
+        VerEstudiantes();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        retrieveStudents();
+        VerEstudiantes();
     }
 
-    public void retrieveStudents() {
+    public void VerEstudiantes() {
         String URL = "content://com.edu.sv.ejercicioguia12/students";
-
         Uri students = Uri.parse(URL);
         Cursor c = getContentResolver().query(students, null, null, null, null);
-
         adaptador.swapCursor(c);
         adaptador.notifyDataSetChanged();
     }
@@ -59,5 +51,4 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, Agregar.class );
         startActivity(i);
     }
-
 }
