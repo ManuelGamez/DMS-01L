@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         inicilizarInterface();
-        binding.searchProduct.setOnQueryTextListener(this);
-        mostrar_todos_los_productos();
+        binding.searchProduct.setOnQueryTextListener((SearchView.OnQueryTextListener) this);
+        mostrar_todos_los_productos(MainActivity.this);
     }
 
     private void inicilizarInterface() {
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         });
     }
 
-    private void mostrar_todos_los_productos(){
+    private void mostrar_todos_los_productos(Context context){
         Call<List<Producto>> call = Servicio.service.getProducts();
         call.enqueue(new Callback<List<Producto>>() {
             @Override
@@ -105,6 +106,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             }
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mostrar_todos_los_productos(MainActivity.this);
+    }
+
     @Override
     public boolean onQueryTextSubmit(String query) {
         if (!query.trim().equals("")) {
@@ -115,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        if (newText.trim().equals("")) mostrar_todos_los_productos();
+        if (newText.trim().equals("")) mostrar_todos_los_productos(MainActivity.this);
         return true;
     }
 }
